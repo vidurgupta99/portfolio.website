@@ -38,4 +38,12 @@
       font-size: 1em;
     }
   }
-  
+
+  div {
+    display: block;
+}
+
+button {
+    flex: 1;
+    text-align: center;
+}
