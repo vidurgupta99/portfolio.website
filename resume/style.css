@@ -1,4 +1,5 @@
 *{
+    border: 1px solid gold;
   }
   :root {
     --light-blue: #92b2ba;
@@ -92,19 +93,13 @@ ul {
   border-radius: 10px;
 }
 
- /* == header 600px breakpoint == */
- @media (min-width: 600px) {
-  header {
-    width: 80%;
-    min-height: 30em;
-    margin: 1em auto;
-    padding: 2em;
-    box-sizing: border-box;
-  }
-  header h1 {
-    font-size: 5em;
-  }
-  header h2 {
-    font-size: 1.3em;
-  }
+.resume{
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+iframe {
+  margin-top: 20px;
+  height: 400px;
 }
