@@ -1,3 +1,51 @@
+:root {
+    --light-blue: #92b2ba;
+    --light-pink: #f9dde0;
+    --med-pink: #f0a8bb;
+  }
+  
+  /* ================
+     NAVIGATION
+  ================ */
+  nav {
+    background: var(--light-blue);
+    height: 3em;
+    padding: 0 2em;
+    box-sizing: border-box;
+    font-size: 0.55em;
+    /* === flex styles (parent) === */
+    display: flex;
+    align-items: center; /* aligns the <nav>'s direct children to the vertical center */
+    justify-content: space-between; /* aligns the <nav>'s direct children across the entire width of the nav with equal spacing between each child */
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'DM Sans', calibri;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  /* == nav 600px breakpoint == */
+  @media (min-width: 600px) {
+    nav {
+      width: 80%;
+      height: 5em;
+      margin: 2em auto 1.5em auto;
+      padding: 0 4em;
+      font-size: 1em;
+    }
+  }
+
+  div {
+    display: block;
+}
+
+button {
+    flex: 1;
+    text-align: center;
+}
+
+
 /* ======= GENERAL ======== */
 body {
 	background: #f9f9f9;
