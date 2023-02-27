@@ -1,162 +1,43 @@
-// START JQUERY AND JS CODE
+//I wanted to make a drop down menu. this is the first thing that i'm going to do in jquery. 
+//here is my reference, it was a great tool in making this happen
+//https://www.youtube.com/watch?v=kxfXH0dxU70
+
 $(() => {
-    // ON LOAD, HIDES ALL ELEMENTS FOR THE SPLASH PAGE
-    $(".resume").hide()
-    $(".about-me").hide()
-    $(".project").hide()
-    $(".dropdown").hide()
-    
-    // BUTTON FUNCTIONALITY. WHEN CLICKLING, SLIDES UP OR DOWN (HIDE/SHOWS) THE CURRENT TOPIC CLICKED 
-    const clickHome = () => {
-        $(".resume").slideUp(1000);
-        $(".about-me").slideUp(1000);
-        $(".project").slideUp(1000);
-    }
-    const clickAboutMe = () => {
-        $(".resume").slideUp(1000);
-        $(".project").slideUp(1000)
-        $(".about-me").slideDown(900);
-    }
-    const clickResume = () => {
-        $(".about-me").slideUp(1000);
-        $(".project").slideUp(1000);
-        $(".resume").slideDown(900);
-    }
-    
-    const clickRPS = () => {
-        $(".about-me").slideUp(1000);
-        $(".resume").slideUp(1000);
-        $(".project").slideDown()
-    }
-    // HOVER FUNCTIONALITY FOR THE NAVIGATION BAR AND DROP DOWN MENU
-    const $hoverColor= () => {
-        $(".topbutton").hover(
-            function(){
-                $(this).css("background", "gray");
+    $('#links').hover(
+        () => {
+            $('ul.sub').slideDown(500)
         },
-            function(){
-                $(this).css("background","transparent");
-        });
-        $(".push").hover(
-            function(){
-                $(this).css("background", "gray");
-        },
-            function(){
-                $(this).css("background","transparent");
-        });
-        $(".projectA").hover(
-            function(){
-                $(this).css("background", "gray");
-        },
-            function(){
-                $(this).css("background","transparent");
-        });
-    }
-    
-    // SINCE NAVBAR CONSISTS OF DIVS AND NOT BUTTON TYPES, HAD TO MAKE THE CURSOR CHANGE TO A POINTER TO INDICATE THEY WERE BUTTONS 
-    const $hoverPointer = () => {
-        $(".topbutton").hover(
-            function() {
-                $(this).css('cursor','pointer');
-        }, 
-            function() {
-                $(this).css('cursor','auto');
-        });
-        $(".push").hover(
-            function() {
-                $(this).css('cursor','pointer');
-        }, 
-            function() {
-                $(this).css('cursor','auto');
-        });
-    }
-    
-    
-    
-    // HOVER OVER FOR DROP DOWN MENU FUNCTIONALITY. WHEN NOT. USED SHOW/HIDE INSTEAD OF SLIDE METHOD. WHEN USING SLIDE, BUGS OCCUERED WITH CHILD DIVS (CONSTANT UP/DOWN INFINITELY)
-    const $hoverDropDown = () => {
-        $("#project, .dropdown").hover(
-            function(){
-                $(".dropdown").show()
-        },   
-            function(){
-                $(".dropdown").hide()
-        }   
-        )
-    }
-    
-    //CLICK INSTEAD OF HOVER WHEN ON MOBILE
-    const $clickDropDown = () => {
-        $("#project").click(
-            function(){
-                $(".dropdown").slideToggle()
-        },
-      )
-    }
-    
-    // MEDIA QUERY THAT DETERMINES IF THE SCREEN SIZE IS BELOW A CERTAIN AMOUNT, USE THE CLICK FUNCTION INSTEAD OF HOVER
-    const $mediaQuery = () => {
-        if(window.matchMedia("(max-width: 767px)").matches){
-            // The viewport is less than 768 pixels wide
-            $clickDropDown();
-        } else{
-            // The viewport is at least 768 pixels wide
-            $hoverDropDown();
+        () => {
+            $('ul.sub').slideUp(300)
         }
-    };
+    )
+
+
+const addText1 = () => {
+    let description1 = $('<p>').text(`In Arts R Us I used an express-style app with a mongo database to build a fully-functioning CRUD based application. I used Express, Html, Mongo, Javascript, and CSS to accomplish this.`)
+
+    $('#p1').append(description1)
+    $('#project1Button').prop('disabled', true)
+
+    }
+
+const addText2  = () => {
+    let description2 = $('<p>').text(`In Comic World I collaborated with another partner to accomplish a fully functioning CRUD based application using ReactJS for our front-end and MongoDB as our back-end. I successfully implented a sort feature which makes a unique array of names with no duplicates based on JSON information from an API.`)
+
+    $('#p2').append(description2)
+    $('#project2Button').prop('disabled', true)
+
+    }
+
+const addText3  = () => {
+    let description3 = $('<p>').text(`Keyboard Part-Picker is a CRUD Based application where users can build their own keyboard, or select a default one from a list they can search through. I built this with two other teammates, and we used Django as our back-end framework, react as our front-end, and PostgreSQL as our backend server. `)
     
-    // Rock Paper Scissors JS Function
-    // ===============================
+    $('#p3').append(description3)
+    $('#project3Button').prop('disabled', true)
     
-    // ARRAY FOR COMPUTER TO "CHOOSE"
-    const options = ["rock", "paper", "scissors"];
-    // COMPUTER RANDOM CHOICE FUNCTION 
-    let computerChooses = () => {
-      return options[Math.floor(Math.random() * 3)]
-    };
-    // COMPARING THE CHOICES AND RETURNING THE RESULT
-    compareChoices = (userChoice, computerChoice) => {
-        if (userChoice === computerChoice){
-          return (`It's a tie! You chose ${userChoice} and the computer chose ${computerChoice}. Play again?`)
-        } else if (userChoice === options[0] && computerChoice === options[2] ||
-                   userChoice === options[1] && computerChoice === options[0] || 
-                   userChoice === options[2] && computerChoice === options[1]) {
-          return (`You won! You chose ${userChoice} and the computer chose ${computerChoice}. Play again?`)
-        } else {
-          return (`You lost. You chose ${userChoice} and the computer chose ${computerChoice}. Play again?`)
-        }
-    } 
-    
-    
-    // JQUERY CONNECTED TO THE ABOVE
-        $("#home").on('click', clickHome);
-        $("#aboutme").on('click', clickAboutMe);
-        $("#resume").on('click', clickResume);
-        $(".projectA").on('click', clickRPS)
-        $(".topbutton").on('hover', $hoverColor());
-    
-    //ROCK PAPER SCISSORS RESULT TO USE IN THE DOM AND SHOW USER
-    // USER CHOOSES ROCK PAPER OR SCISSORS WITH BUTTON ON PAGE 
-    // EACH BUTTON TRIGGERS THE RPS FUNCTION WITH A THE ASSOCIATED BUTTON ARGUMENT AND COMPUTER "CHOICE"; COMPARES THEM. 
-        $("#paper").on('click', function(){
-            let result = compareChoices("paper", computerChooses());
-            $("#resultContainer").text(result)
-        });
-        $("#rock").on('click', function(){
-            let result = compareChoices("rock", computerChooses());
-            $("#resultContainer").text(result)
-        });
-        $("#scissors").on('click', function(){
-            let result = compareChoices("scissors", computerChooses());
-            $("#resultContainer").text(result)
-        });
-    
-    //ADDED THESE HERE, BECUASE I NEED TO CALL THEM FOR THEM TO WORK. DIDN'T KNOW WHERE TO PUT THEM. I GUESS I COULD PUT THEM UP ABOVE.  
-        $mediaQuery()
-        $hoverPointer()
-    
-    
-       
-      
-    
-    })
+}
+$('#project1Button').on('click', addText1)
+$('#project2Button').on('click', addText2)
+$('#project3Button').on('click', addText3)
+})
+
