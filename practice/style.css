@@ -1,0 +1,14 @@
+#first-modal{
+  
+	display:block;
+	
+	background:purple;
+	color:white;
+  }
+  #second-modal{
+	
+	display:none;
+	  
+	background:grey;
+	color:white;
+  }
