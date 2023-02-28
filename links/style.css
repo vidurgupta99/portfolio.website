@@ -43,8 +43,7 @@ body {
     padding: 0;
     object-position: center;
     margin: 0;
-    /* background-color: #edafb8; */
-    background-color: #588b8b;
+    background-color: rgb(235, 227, 243);
     border: 0;
 }
 
@@ -91,6 +90,7 @@ h5 {
     margin: 0;
     padding: 15px;
 }
+
 #projects-div {
     /* background-color:#dedbd2 ; */
     background-color: #ffd5c2;
@@ -116,7 +116,7 @@ footer {
     list-style: none;
 }
 a {
-    color: whitesmoke;
+    color: rgb(245, 245, 245);
 }
 
 a:hover {
