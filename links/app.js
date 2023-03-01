@@ -2,41 +2,36 @@ $(() => {
 
     // Elements Created for JQuery
     
-    $aboutMeDiv = $('#bio-paragraph')
-    $resumeDiv = $('#resume-paragraph')
-    $projectsDiv = $('#projects-divy')
+    $linkedinDiv = $('#linkedinParagraph') // 'linkedinParagraph' '#bioparagraph'
+    $githubDiv = $('#github-paragraph') // 'resume-paragraph'
+    $extraDiv = $('#projects-divy')
 
     
     
     
     // On Load, show/hide:
-    $aboutMeDiv.hide()
-    $projectsDiv.hide()
-    $resumeDiv.hide()
+    $linkedinDiv.hide()
+    $extraDiv.hide()
+    $githubDiv.hide()
+      
   
-    // $erapDeets.hide()
-    // $donorDeets.hide()
-    // $libDeets.hide()
-    // $mcanDeets.hide()
-    
-    
     
     // Funtions for on-click:
     const expandContainer = () => {
-        $aboutMeDiv.slideToggle(700)
-        $resumeDiv.slideUp(700)
-        $projectsDiv.slideUp(700)
+        $linkedinDiv.slideToggle(700)
+        $githubDiv.slideUp(700)
+        $extraDiv.slideUp(700)
     }
     
     const closeAndExpand = () => {
-        $projectsDiv.slideToggle(700)
-        $aboutMeDiv.slideUp(700)
-        $resumeDiv.slideUp(700)
+        $extraDiv.slideToggle(700)
+        $linkedinDiv.slideUp(700)
+        $githubDiv.slideUp(700)
     }
     const expandOther = () => {
-        $resumeDiv.slideToggle(700)
-        $aboutMeDiv.slideUp(700)
-        $projectsDiv.slideUp(700)
+        $githubDiv.slideToggle(700)
+        $linkedinDiv.slideUp(700)
+        $extraDiv.slideUp(700)
     }
    
     // OnClick Actions
