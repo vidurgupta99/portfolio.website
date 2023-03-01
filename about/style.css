@@ -11,10 +11,10 @@
   ================ */
   nav {
     background: var(--light-blue);
-    height: 3em;
+    height: 4em;
     padding: 0 2em;
     box-sizing: border-box;
-    font-size: 0.55em;
+    font-size: 0.73em;
     /* === flex styles (parent) === */
     display: flex;
     align-items: center; /* aligns the <nav>'s direct children to the vertical center */
@@ -24,7 +24,7 @@
     color: white;
     text-decoration: none;
     font-family: 'DM Sans', calibri;
-    font-weight: 700;
+    font-weight: 750;
     font-size: 1.1em;
   }
   /* == nav 600px breakpoint == */
@@ -47,8 +47,6 @@ button {
     text-align: center;
 }
 
-/* General */
-
 body {
   background-color: rgb(235, 227, 243);
   color: black;
@@ -58,21 +56,9 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-.navigation {
-  display: flex;
-}
 
 ul {
   list-style: none;
-}
-
-.empty-header-space {
-  flex: 1;
-}
-
-.nav-list {
-  display: flex;
-  flex: 6;
 }
 
 .button {

@@ -5,11 +5,7 @@ $(() => {
     $aboutMeDiv = $('#bio-paragraph')
     $resumeDiv = $('#resume-paragraph')
     $projectsDiv = $('#projects-divy')
-    $professionalDiv = $('.hide-jobs')
-    $skillsDeets = $('#skills')
-    $experience = $('#experiencehead')
-    $resumeSections = $('.resumeheader')
-    $resumeDeets = $('.resume-details')
+
     
     
     
@@ -26,29 +22,27 @@ $(() => {
     
     
     // Funtions for on-click:
-    const toggleAboutMe = () => {
-        $aboutMeDiv.slideToggle(2000)
-        $resumeDiv.slideUp(2000)
-        $projectsDiv.slideUp(2000)
+    const expandContainer = () => {
+        $aboutMeDiv.slideToggle(700)
+        $resumeDiv.slideUp(700)
+        $projectsDiv.slideUp(700)
     }
-    const toggleProjects = () => {
-        $projectsDiv.slideToggle(2000)
-        $aboutMeDiv.slideUp(2000)
-        $resumeDiv.slideUp(2000)
+    
+    const closeAndExpand = () => {
+        $projectsDiv.slideToggle(700)
+        $aboutMeDiv.slideUp(700)
+        $resumeDiv.slideUp(700)
     }
-    const toggleResume = () => {
-        $resumeDiv.slideToggle(2000)
-        $aboutMeDiv.slideUp(2000)
-        $projectsDiv.slideUp(2000)
-        $eduDetails.slideUp(1500)
-        $volDetails.slideUp(1500)
-        $skillsDeets.slideUp(1500)
+    const expandOther = () => {
+        $resumeDiv.slideToggle(700)
+        $aboutMeDiv.slideUp(700)
+        $projectsDiv.slideUp(700)
     }
    
     // OnClick Actions
-        $('#about-header').on('click', toggleAboutMe)
-        $('#projects-header').on('click', toggleProjects)
-        $('#resume-header').on('click', toggleResume)
+        $('#about-header').on('click', expandContainer)
+        $('#projects-header').on('click', closeAndExpand)
+        $('#resume-header').on('click', expandOther)
      
     
     

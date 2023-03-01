@@ -55,21 +55,9 @@ transition: .4s;
 font-family: 'Nunito', sans-serif;
 }
 
-.navigation {
-display: flex;
-}
 
 ul {
 list-style: none;
-}
-
-.empty-header-space {
-flex: 1;
-}
-
-.nav-list {
-display: flex;
-flex: 6;
 }
 
 /* == header 600px breakpoint == */
