@@ -35,9 +35,9 @@ $(() => {
     }
    
     // OnClick Actions
-        $('#about-header').on('click', expandContainer)
-        $('#projects-header').on('click', closeAndExpand)
-        $('#resume-header').on('click', expandOther)
+        $('#github').on('click', expandContainer) // #about-header. github-header
+        $('#extra').on('click', closeAndExpand) // 'extra'
+        $('#linkedin').on('click', expandOther)
      
     
     
