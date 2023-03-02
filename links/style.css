@@ -25,7 +25,7 @@
     font-weight: 700;
     font-size: 1.1em;
   }
-  /* == nav 600px breakpoint == */
+  /* == 600px nav bar adjustment == */
   @media (min-width: 600px) {
     nav {
       width: 80%;
@@ -77,13 +77,13 @@
   h5 {
       opacity: 70%;
   }
-  #bio-paragraph {
+  #paragraph {
       text-align: center;
       justify-content: space-around;
       padding: 15px 80px 15px 80px;
       margin: 0
   }
-  #about-div {
+  #github-div {
       /* background-color: #b0c4b1; */
       background-color: #ffffff;
       color: #588b8b;
@@ -91,15 +91,7 @@
       padding: 15px;
   }
   
-  #projects-div {
-      /* background-color:#dedbd2 ; */
-      background-color: #ffd5c2;
-      color: #c8553d;
-      margin: 0;
-      padding: 15px;
-  }
-  
-  #resume-div {
+  #linkedin-div {
       /* background-color: #f7e1d7; */
       background-color: #c8553d;
       color: #ffd5c2;
@@ -117,4 +109,3 @@
       opacity: 60%;
       cursor: pointer;
   }
-  
