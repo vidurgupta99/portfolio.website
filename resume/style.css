@@ -88,15 +88,6 @@ iframe {
   display: block;
   margin: auto;
 }
-
-#first-modal{
-  
-	display:block;
-  text-align: center;
-  background:purple;
-	color:white;
-  }
-
   #second-modal{
 	
 	display:none;
@@ -106,12 +97,4 @@ iframe {
 
 	color:white;
   }
-  #third-modal{
-	
-	display:none;
-  
-	background:orange;
-	color:white
-  }
-
 }
